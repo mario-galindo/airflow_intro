@@ -1,0 +1,2 @@
+instance_id: abcdabcd-1111-2222-3333-abcdabcdabcd
+connection_string_bigquery: bigquery://data-eng-class-370920/great_expectations_bigquery_example

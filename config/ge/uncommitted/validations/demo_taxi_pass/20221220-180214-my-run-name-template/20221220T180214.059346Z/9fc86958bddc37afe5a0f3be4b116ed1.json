@@ -1,0 +1,176 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {},
+      "data_asset_name": "great_expectations_bigquery_example.taxi",
+      "data_connector_name": "default_inferred_data_connector_name",
+      "datasource_name": "bigquery_datasource"
+    },
+    "batch_markers": {
+      "ge_load_time": "20221220T180216.456103Z"
+    },
+    "batch_spec": {
+      "batch_identifiers": {},
+      "bigquery_temp_table": "great_expectations_bigquery_example.taxi_temp",
+      "data_asset_name": "great_expectations_bigquery_example.taxi",
+      "data_asset_name_prefix": "",
+      "data_asset_name_suffix": "",
+      "include_schema_name": true,
+      "schema_name": "great_expectations_bigquery_example",
+      "table_name": "taxi",
+      "type": "table"
+    },
+    "checkpoint_id": null,
+    "checkpoint_name": "demo_taxi_pass_chk",
+    "expectation_suite_name": "demo_taxi_pass",
+    "great_expectations_version": "0.15.41",
+    "run_id": {
+      "run_name": "20221220-180214-my-run-name-template",
+      "run_time": "2022-12-20T18:02:14.059346+00:00"
+    },
+    "validation_id": null,
+    "validation_time": "20221220T180219.327745Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_context": {
+          "description": null
+        },
+        "expectation_type": "expect_table_row_count_to_be_between",
+        "kwargs": {
+          "batch_id": "9fc86958bddc37afe5a0f3be4b116ed1",
+          "max_value": 11000,
+          "min_value": 9000
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 10000
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_context": {
+          "description": null
+        },
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "9fc86958bddc37afe5a0f3be4b116ed1",
+          "column": "vendor_id"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 10000,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_context": {
+          "description": null
+        },
+        "expectation_type": "expect_column_distinct_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "9fc86958bddc37afe5a0f3be4b116ed1",
+          "column": "vendor_id",
+          "value_set": [
+            1,
+            2,
+            4
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "details": {
+          "value_counts": [
+            {
+              "count": 3754,
+              "value": 1
+            },
+            {
+              "count": 6150,
+              "value": 2
+            },
+            {
+              "count": 96,
+              "value": 4
+            }
+          ]
+        },
+        "observed_value": [
+          1,
+          2,
+          4
+        ]
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_context": {
+          "description": null
+        },
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "9fc86958bddc37afe5a0f3be4b116ed1",
+          "column": "passenger_count",
+          "max_value": 6,
+          "min_value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 10000,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 4,
+    "success_percent": 100.0,
+    "successful_expectations": 4,
+    "unsuccessful_expectations": 0
+  },
+  "success": true
+}
